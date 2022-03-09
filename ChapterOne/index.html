@@ -12,21 +12,46 @@
 </body>
 <script>
 
-    function GetData(){
-        const xhr = new XMLHttpRequest();
-        xhr.responseType = 'json';
-        xhr.onreadystatechange = ()=>{
-            if(xhr.readyState == 4 && xhr.status == 200){
-                console.log(xhr.responseText);
-                console.log(xhr.response);
-            }
-            console.log(xhr.readyState);
-        }
-        xhr.open('GET' , 'URl');
-        xhr.send();
+    // function GetData(){
+    //     const xhr = new XMLHttpRequest();
+    //     xhr.responseType = 'json';
+    //     xhr.onreadystatechange = ()=>{
+    //         if(xhr.readyState == 4 && xhr.status == 200){
+    //             console.log(xhr.responseText);
+    //             console.log(xhr.response);
+    //         }
+    //         console.log(xhr.readyState);
+    //     }
+    //     xhr.open('GET' , 'URl');
+    //     xhr.send();
         
        
       
+    // }
+
+
+    async function getDate(){
+        let promos = await new Date();
+        console.log("hello");
+    return promos
+
+    }
+    getDate().then((data) =>console.log(data));
+
+
+
+
+    //then and Catch Handling promosis
+
+    function PostData(){
+       const   xhr = new XMLHttpRequest();
+
+       xhr.responseType = 'json';
+       xhr.onload=() =>{
+           if(xhr.readyState == 4 && xhr.status == 200){
+
+           }
+       }
     }
 
     GetData();
